@@ -1,0 +1,35 @@
+{
+  "name": "encsearch",
+  "abstract": "Searchable encryption: AEAD-encrypted text with keyed blind indexes",
+  "description": "Encrypts text with AES-256-GCM (or seven other AEAD ciphers) and stores keyed HMAC/BLAKE3 tokens of words and n-grams in a GIN-indexed int8[] column, enabling exact, word, prefix, suffix and substring search without decrypting the table.",
+  "version": "0.1.0",
+  "maintainer": ["Lokesh Mulpuru <lokesh.mullpuri@gmail.com>"],
+  "license": "postgresql",
+  "provides": {
+    "encsearch": {
+      "abstract": "Searchable encryption with blind indexes",
+      "file": "src/lib.rs",
+      "docfile": "README.md",
+      "version": "0.1.0"
+    }
+  },
+  "prereqs": {
+    "runtime": {
+      "requires": {
+        "PostgreSQL": "17.0.0"
+      }
+    }
+  },
+  "resources": {
+    "bugtracker": { "web": "https://github.com/lokeshmulpuru/encsearch/issues" },
+    "repository": {
+      "url": "https://github.com/lokeshmulpuru/encsearch.git",
+      "web": "https://github.com/lokeshmulpuru/encsearch",
+      "type": "git"
+    }
+  },
+  "generated_by": "Lokesh Mulpuru",
+  "tags": ["encryption", "searchable encryption", "blind index", "aes", "security", "pgrx", "rust"],
+  "release_status": "testing",
+  "meta-spec": { "version": "1.0.0", "url": "https://pgxn.org/meta/spec.txt" }
+}

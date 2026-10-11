@@ -1,0 +1,6 @@
+comment = 'Searchable encryption: AEAD-encrypted text with keyed blind indexes for exact, word, prefix and substring search'
+default_version = '@CARGO_VERSION@'
+module_pathname = 'encsearch'
+relocatable = false
+superuser = true
+trusted = false

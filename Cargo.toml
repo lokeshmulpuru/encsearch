@@ -1,0 +1,51 @@
+[package]
+name = "encsearch"
+version = "0.1.0"
+edition = "2021"
+description = "Searchable encryption for PostgreSQL: AEAD-encrypted text with keyed blind indexes for exact, word, prefix and substring search"
+license = "PostgreSQL"
+repository = "https://github.com/lokeshmulpuru/encsearch"
+readme = "README.md"
+keywords = ["postgres", "encryption", "search", "pgrx", "blind-index"]
+categories = ["database", "cryptography"]
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+default = ["pg17"]
+pg14 = ["pgrx/pg14", "pgrx-tests/pg14"]
+pg15 = ["pgrx/pg15", "pgrx-tests/pg15"]
+pg16 = ["pgrx/pg16", "pgrx-tests/pg16"]
+pg17 = ["pgrx/pg17", "pgrx-tests/pg17"]
+pg18 = ["pgrx/pg18", "pgrx-tests/pg18"]
+pg_test = []
+
+[dependencies]
+aegis = "0.9.20"
+aes = "0.9.3"
+aes-gcm = "0.11.1"
+aes-gcm-siv = "0.12.1"
+aes-siv = "0.8.0"
+ascon-aead = "0.6.0"
+blake3 = "1.8.7"
+chacha20poly1305 = "0.11.0"
+getrandom = "0.4.3"
+hkdf = "0.13.0"
+hmac = "0.13.0"
+ocb3 = "0.2.0"
+pgrx = "=0.19.3"
+sha2 = "0.11.0"
+
+[dev-dependencies]
+pgrx-tests = "=0.19.3"
+
+[profile.dev]
+panic = "unwind"
+
+[profile.release]
+panic = "unwind"
+opt-level = 3
+lto = "fat"
+codegen-units = 1
