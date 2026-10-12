@@ -1,6 +1,6 @@
 [package]
 name = "encsearch"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "Searchable encryption for PostgreSQL: AEAD-encrypted text with keyed blind indexes for exact, word, prefix and substring search"
 license = "PostgreSQL"
