@@ -9,7 +9,7 @@ substring searches without decrypting the table.
 On 1M rows, a substring search takes about 25 ms, versus about 3.9 s to decrypt
 and scan every row.
 
-> **Status: experimental (v0.1.0).** Read [Security notes](#security-notes)
+> **Status: v0.1.1, early release.** Read [Security notes](#security-notes)
 > before storing real data. The blind index trades some privacy for speed.
 
 ## Install
