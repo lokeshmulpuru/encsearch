@@ -14,12 +14,12 @@ and scan every row.
 
 ## Install
 
-Requirements: PostgreSQL 17 (other versions untested), Rust, a C compiler, and
-[cargo-pgrx](https://github.com/pgcentralfoundation/pgrx) 0.19.3.
+Requirements: PostgreSQL 15 through 19, Rust, a C compiler, and
+[cargo-pgrx](https://github.com/pgcentralfoundation/pgrx) 0.20.1.
 
 ```sh
-cargo install cargo-pgrx --version 0.19.3 --locked
-cargo pgrx init --pg17 $(which pg_config)
+cargo install cargo-pgrx --version 0.20.1 --locked
+cargo pgrx init --pg19 $(which pg_config)
 
 git clone https://github.com/lokeshmulpuru/encsearch.git
 cd encsearch
@@ -129,8 +129,8 @@ Table 725 MB, GIN index 159 MB.
 ## Development
 
 ```sh
-cargo pgrx test pg17     # run the test suite inside a temporary Postgres
-cargo pgrx run pg17      # psql with the extension installed
+cargo pgrx test pg19     # run the test suite inside a temporary Postgres
+cargo pgrx run pg19      # psql with the extension installed
 psql -f bench.sql        # 1M-row benchmark
 ```
 
