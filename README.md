@@ -15,7 +15,7 @@ and scan every row.
 ## Install
 
 Requirements: PostgreSQL 15 through 19, Rust, a C compiler, and
-[cargo-pgrx](https://github.com/pgcentralfoundation/pgrx) 0.19.3.
+[cargo-pgrx](https://github.com/pgcentralfoundation/pgrx) 0.20.1.
 
 ```sh
 cargo install cargo-pgrx --version 0.20.1 --locked
